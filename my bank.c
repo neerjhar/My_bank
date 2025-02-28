@@ -9,7 +9,7 @@ int main() {
     int card;
     int pin;
     int option;
-    int Money = 12000;
+    int Money;
 
     int amount;
     int deposit;
@@ -18,6 +18,9 @@ int main() {
     printf(". | Welcome to the ATM Service |   .\n");
     printf("....................................\n\n");
 
+    printf("Please enter your initial balance: ");
+    scanf("%d", &Money);
+
     printf("Please enter your debit card number: ");
     scanf("%d", &card);
 
@@ -25,7 +28,6 @@ int main() {
 
     printf("Please enter your 4-digit secret PIN: ");
     scanf("%d", &pin);
-
 
     if (pin == atmPin) {
 
@@ -41,10 +43,8 @@ int main() {
             printf("│ Enter your choice:           │\n");
             printf("└──────────────────────────────┘\n");
             
-
             scanf("%d", &option);
             
-
             switch (option) {
 
                 case 1:
@@ -121,6 +121,5 @@ int main() {
 
         printf("Invalid PIN. Please try again!\n");
     }
-
 
 }
